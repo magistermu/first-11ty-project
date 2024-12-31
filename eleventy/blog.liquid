@@ -1,0 +1,19 @@
+---
+title: My blog    
+layout: mylayout.liquid
+---    
+
+<h1>This is my blog</h1>
+
+<ul>
+    
+{%- for post in collections.post reversed -%}
+  <li>
+    <article>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.description }}</p>
+        <a href="{{ post.url }}">Saber mas</a>
+    </article>
+  </li>
+{%- endfor -%}
+</ul>
